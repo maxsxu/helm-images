@@ -1,0 +1,8 @@
+name: "images"
+version: "0.1.0"
+usage: "get all the docker images needed by a chart"
+description: |-
+  This plugin can get all the docker images needed by a chart.
+ignoreFlags: false
+useTunnel: false
+command: "$HELM_PLUGIN_DIR/images.sh"
