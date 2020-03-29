@@ -13,4 +13,4 @@
 
 #echo "All the images needed by $1"
 
-helm install $1 --generate-name --dry-run | grep "image:" | awk -F" " '{print $2}' | sed 's/^"//g' | sed 's/\"//g' | sort | awk '!seen[$0]++'
+helm install --generate-name --dry-run "$@" | grep "image:" | awk -F" " '{print $2}' | sed 's/^"//g' | sed 's/\"//g' | sort | awk '!seen[$0]++'
